@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://c36jnxecyidar"]
+
+[ext_resource type="Script" uid="uid://cbvfbknkgtdie" path="res://scripts/countdown_screen.gd" id="1_hnsy1"]
+[ext_resource type="FontFile" uid="uid://dt6f84ufh80c5" path="res://assets/MountainsofChristmas-Bold.ttf" id="2_2knl8"]
+[ext_resource type="Texture2D" uid="uid://b14la01qlwjvb" path="res://assets/santa_claus.png" id="3_wmy3a"]
+[ext_resource type="Texture2D" uid="uid://cnortsmeqluvg" path="res://assets/christmas_tree.png" id="4_74uaw"]
+[ext_resource type="Texture2D" uid="uid://ocn452fgho8" path="res://assets/holly.png" id="5_qb3nk"]
+[ext_resource type="Texture2D" uid="uid://5oevnrnxjqrn" path="res://assets/holly2.png" id="6_n6x0m"]
+[ext_resource type="Texture2D" uid="uid://dp7kucvbq2vyt" path="res://textures/flocon.tres" id="7_a5xfm"]
+[ext_resource type="AudioStream" uid="uid://cqef83bn80mxg" path="res://assets/firework.wav" id="8_53gve"]
+[ext_resource type="AudioStream" uid="uid://ntxcivagqkoa" path="res://assets/background_music.mp3" id="9_oc87v"]
+
+[node name="CountdownScreen" type="Node2D" unique_id=310494899]
+script = ExtResource("1_hnsy1")
+
+[node name="Canvas" type="CanvasLayer" parent="." unique_id=1074127774]
+
+[node name="Background" type="ColorRect" parent="Canvas" unique_id=1854201480]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.078431375, 0.19607843, 0.47058824, 1)
+
+[node name="Text" type="RichTextLabel" parent="Canvas" unique_id=1446361442]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -385.0
+offset_top = -347.0
+offset_right = 385.0
+offset_bottom = 347.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 5
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/normal_font = ExtResource("2_2knl8")
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "Texte"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SantaClaus" type="TextureRect" parent="Canvas" unique_id=1238328298]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -327.0
+offset_right = 327.0
+grow_vertical = 0
+offset_transform_enabled = true
+texture = ExtResource("3_wmy3a")
+expand_mode = 1
+
+[node name="ChristmasTree" type="TextureRect" parent="Canvas" unique_id=675805115]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -340.0
+offset_top = -551.7242
+grow_horizontal = 0
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 20)
+texture = ExtResource("4_74uaw")
+expand_mode = 1
+
+[node name="Holly" type="TextureRect" parent="Canvas" unique_id=2128871226]
+offset_right = 185.0
+offset_bottom = 185.0
+offset_transform_enabled = true
+offset_transform_rotation = -1.5707964
+texture = ExtResource("5_qb3nk")
+expand_mode = 1
+
+[node name="HollyCenter" type="TextureRect" parent="Canvas" unique_id=1491147257]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -142.36432
+offset_right = 142.36432
+offset_bottom = 101.0
+grow_horizontal = 2
+texture = ExtResource("6_n6x0m")
+expand_mode = 1
+
+[node name="Holly2" type="TextureRect" parent="Canvas" unique_id=541134219]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -185.0
+offset_bottom = 185.0
+grow_horizontal = 0
+offset_transform_enabled = true
+texture = ExtResource("5_qb3nk")
+expand_mode = 1
+
+[node name="Snow" type="CPUParticles2D" parent="Canvas" unique_id=301667406]
+position = Vector2(540, 0)
+amount = 50
+texture = ExtResource("7_a5xfm")
+lifetime = 10.0
+fixed_fps = 30
+draw_order = 1
+emission_shape = 3
+emission_rect_extents = Vector2(512, 1)
+gravity = Vector2(0, 98)
+
+[node name="Timer" type="Timer" parent="." unique_id=725807511]
+autostart = true
+
+[node name="FireworkSound" type="AudioStreamPlayer" parent="." unique_id=1004134218]
+stream = ExtResource("8_53gve")
+volume_db = 10.0
+max_polyphony = 8
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=875647094]
+stream = ExtResource("9_oc87v")

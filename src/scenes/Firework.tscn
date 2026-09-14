@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://vovf28jv31qy"]
+
+[ext_resource type="Texture2D" uid="uid://vcgu1aao2e8d" path="res://textures/firework_orange.tres" id="1_pqanf"]
+[ext_resource type="Script" uid="uid://dlro3fvawo0i4" path="res://scripts/firework.gd" id="2_18m8l"]
+
+[sub_resource type="Gradient" id="Gradient_c1cvd"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="FeuArtifice" type="CPUParticles2D" unique_id=292626056]
+z_index = 10
+emitting = false
+amount = 100
+texture = ExtResource("1_pqanf")
+lifetime = 1.5
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 30
+draw_order = 1
+particle_flag_align_y = true
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 150)
+initial_velocity_min = 120.0
+initial_velocity_max = 250.0
+damping_max = 20.0
+color_ramp = SubResource("Gradient_c1cvd")
+script = ExtResource("2_18m8l")

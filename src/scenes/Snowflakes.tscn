@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cp4yq1fm8ry8b"]
+
+[ext_resource type="Texture2D" uid="uid://dp7kucvbq2vyt" path="res://textures/flocon.tres" id="1_ccf0i"]
+[ext_resource type="Script" uid="uid://bovw4omq03k67" path="res://scripts/snow.gd" id="2_8jpxy"]
+
+[node name="Flocons" type="CPUParticles2D" unique_id=1716064027]
+emitting = false
+amount = 50
+texture = ExtResource("1_ccf0i")
+lifetime = 30.0
+fixed_fps = 30
+draw_order = 1
+emission_shape = 3
+emission_rect_extents = Vector2(540, 1)
+gravity = Vector2(0, 98)
+script = ExtResource("2_8jpxy")

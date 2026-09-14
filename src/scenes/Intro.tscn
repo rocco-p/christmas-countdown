@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://ktifj26batml"]
+
+[ext_resource type="Script" uid="uid://duxmkyehv7qku" path="res://scripts/intro.gd" id="1_45dpb"]
+[ext_resource type="FontFile" uid="uid://dt6f84ufh80c5" path="res://assets/MountainsofChristmas-Bold.ttf" id="2_hc7eg"]
+[ext_resource type="FontFile" uid="uid://bwy3i0tqbt3av" path="res://assets/DSEG14Modern-Italic.ttf" id="3_aqbct"]
+[ext_resource type="Texture2D" uid="uid://m8wdsmvp5384" path="res://assets/pere_noel_renne.svg" id="4_mkji7"]
+[ext_resource type="AudioStream" uid="uid://bnab6fm8msepc" path="res://assets/beep.wav" id="4_ywiat"]
+
+[node name="Intro" type="Node2D" unique_id=1592968161]
+script = ExtResource("1_45dpb")
+
+[node name="Canvas" type="CanvasLayer" parent="." unique_id=859527203]
+
+[node name="Fond" type="ColorRect" parent="Canvas" unique_id=1135208417]
+propagate_maximum_size = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.078431375, 0.19607843, 0.47058824, 1)
+metadata/_edit_lock_ = true
+
+[node name="VContainer" type="VBoxContainer" parent="Canvas" unique_id=240289415]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Seconds" type="Label" parent="Canvas/VContainer" unique_id=1334153459]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 20)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("3_aqbct")
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Text" type="Label" parent="Canvas/VContainer" unique_id=1461357678]
+propagate_maximum_size = true
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 20)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("2_hc7eg")
+theme_override_font_sizes/font_size = 100
+text = "Touchez l'écran pour
+entrer dans la magie de
+Noël"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SantaReindeer" type="TextureRect" parent="Canvas/VContainer" unique_id=267352219]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_mkji7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Timer" type="Timer" parent="." unique_id=734732547]
+autostart = true
+
+[node name="Beep" type="AudioStreamPlayer" parent="." unique_id=1057444956]
+stream = ExtResource("4_ywiat")
+volume_db = -20.0
