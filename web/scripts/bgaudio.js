@@ -7,7 +7,7 @@ function initAudio(src) {
 		sound.src      = src;
 		sound.type     = 'audio/mpeg';
 		sound.loop	   = true;
-		document.getElementById('root').appendChild(sound);
+		document.body.appendChild(sound);
 	} catch(error) {
 		console.error('initAudio : ', error);
 	}
