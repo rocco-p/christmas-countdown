@@ -21,11 +21,13 @@ func _ready() -> void:
 	if OS.has_feature("web"):
 		JavaScriptBridge.eval("playAudio();")
 	else:
-		var stream_player: AudioStreamPlayer = AudioStreamPlayer.new()
-		stream_player.stream = preload("res://assets/background_music.ogg")
-		stream_player.stream.loop = true
-		stream_player.autoplay = true
-		add_child(stream_player)
+		var resource_path: String = "res://assets/background_music.ogg"
+		if ResourceLoader.exists(resource_path):
+			var stream_player: AudioStreamPlayer = AudioStreamPlayer.new()
+			stream_player.stream = load(resource_path)
+			stream_player.stream.loop = true
+			stream_player.autoplay = true
+			add_child(stream_player)
 	
 func _input(event: InputEvent) -> void:
 	if event.is_pressed():
