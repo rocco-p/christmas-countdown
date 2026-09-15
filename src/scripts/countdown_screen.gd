@@ -22,7 +22,7 @@ func _ready() -> void:
 		JavaScriptBridge.eval("playAudio();")
 	else:
 		var stream_player: AudioStreamPlayer = AudioStreamPlayer.new()
-		stream_player.stream = preload("res://assets/background_music.mp3")
+		stream_player.stream = preload("res://assets/background_music.ogg")
 		stream_player.stream.loop = true
 		stream_player.autoplay = true
 		add_child(stream_player)
