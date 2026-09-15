@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://duxmkyehv7qku" path="res://scripts/intro.gd" id="1_45dpb"]
 [ext_resource type="FontFile" uid="uid://dt6f84ufh80c5" path="res://assets/MountainsofChristmas-Bold.ttf" id="2_hc7eg"]
 [ext_resource type="FontFile" uid="uid://bwy3i0tqbt3av" path="res://assets/DSEG14Modern-Italic.ttf" id="3_aqbct"]
-[ext_resource type="Texture2D" uid="uid://m8wdsmvp5384" path="res://assets/pere_noel_renne.svg" id="4_mkji7"]
+[ext_resource type="Texture2D" uid="uid://m8wdsmvp5384" path="res://assets/santa_reindeer.svg" id="4_mkji7"]
 [ext_resource type="AudioStream" uid="uid://bnab6fm8msepc" path="res://assets/beep.wav" id="4_ywiat"]
 
 [node name="Intro" type="Node2D" unique_id=1592968161]

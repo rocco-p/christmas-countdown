@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cnortsmeqluvg" path="res://assets/christmas_tree.png" id="4_74uaw"]
 [ext_resource type="Texture2D" uid="uid://ocn452fgho8" path="res://assets/holly.png" id="5_qb3nk"]
 [ext_resource type="Texture2D" uid="uid://5oevnrnxjqrn" path="res://assets/holly2.png" id="6_n6x0m"]
-[ext_resource type="Texture2D" uid="uid://dp7kucvbq2vyt" path="res://textures/flocon.tres" id="7_a5xfm"]
+[ext_resource type="Texture2D" uid="uid://dp7kucvbq2vyt" path="res://textures/snowflake.tres" id="7_a5xfm"]
 [ext_resource type="AudioStream" uid="uid://cqef83bn80mxg" path="res://assets/firework.wav" id="8_53gve"]
 [ext_resource type="AudioStream" uid="uid://ntxcivagqkoa" path="res://assets/background_music.mp3" id="9_oc87v"]
 

@@ -33,10 +33,8 @@ func _input(event: InputEvent) -> void:
 		or event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:		
 			_firework(event.position)
 			
-	if Input.is_key_pressed(KEY_P):
-		return;
-		# var img = get_viewport().get_texture().get_image()
-		# img.save_png("C:\\TEMP\\screen.png")
+	if Input.is_key_pressed(KEY_C):
+		_screenshot()
 		
 	if Input.is_key_pressed(KEY_ESCAPE):
 		get_tree().quit()
@@ -63,3 +61,24 @@ func _refresh() -> void:
 	if (result.code < 0):
 		timer.stop()
 		return
+		
+func _screenshot() -> void:
+	var sub_viewport: SubViewport = SubViewport.new()
+	sub_viewport.size = Vector2i(1080, 1080)
+	sub_viewport.render_target_update_mode = SubViewport.UPDATE_ONCE
+	add_child(sub_viewport)
+	
+	var cloned: CanvasLayer = canvas.duplicate(DUPLICATE_USE_INSTANTIATION)
+	
+	var snow_node: Node = cloned.find_child("Snow", true, false)
+	if snow_node:
+		snow_node.visible = false
+
+	sub_viewport.add_child(cloned)
+	
+	await RenderingServer.frame_post_draw
+	var image: Image = sub_viewport.get_texture().get_image()
+	sub_viewport.queue_free()
+
+	image.save_png("user://capture.png")
+	

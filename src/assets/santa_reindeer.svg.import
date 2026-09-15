@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://m8wdsmvp5384"
-path="res://.godot/imported/pere_noel_renne.svg-0656520b2558a550042440fb33c519b7.ctex"
+path="res://.godot/imported/santa_reindeer.svg-1010d5bc3170906d61dd12ad016314ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pere_noel_renne.svg"
-dest_files=["res://.godot/imported/pere_noel_renne.svg-0656520b2558a550042440fb33c519b7.ctex"]
+source_file="res://assets/santa_reindeer.svg"
+dest_files=["res://.godot/imported/santa_reindeer.svg-1010d5bc3170906d61dd12ad016314ab.ctex"]
 
 [params]
 
