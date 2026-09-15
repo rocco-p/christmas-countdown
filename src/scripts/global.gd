@@ -68,11 +68,13 @@ func christmas_countdown() -> Dictionary:
 	return {"code": 0,"seconds": total_seconds, "text": text_string % [days, hours, minutes, seconds]}
 
 func _on_window_focus_entered() -> void:
-	if OS.has_feature("web"):
-		AudioServer.set_bus_mute(0, false)
-		JavaScriptBridge.eval("pauseAudio();")
+	#if OS.has_feature("web"):
+		#AudioServer.set_bus_mute(0, false)
+		#JavaScriptBridge.eval("resumeAudio();")
+	pass
 
 func _on_window_focus_exited() -> void:
-	if OS.has_feature("web"):
-		AudioServer.set_bus_mute(0, true)
-		JavaScriptBridge.eval("resumeAudio();")
+	#if OS.has_feature("web"):
+		#AudioServer.set_bus_mute(0, true)
+		#JavaScriptBridge.eval("pauseAudio();")
+	pass
