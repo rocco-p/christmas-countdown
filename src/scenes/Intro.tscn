@@ -52,9 +52,7 @@ theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
 theme_override_fonts/font = ExtResource("2_hc7eg")
 theme_override_font_sizes/font_size = 100
-text = "Touchez l'écran pour
-entrer dans la magie de
-Noël"
+text = "INTRO_MESSAGE"
 horizontal_alignment = 1
 vertical_alignment = 1
 

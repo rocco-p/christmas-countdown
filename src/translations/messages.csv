@@ -1,0 +1,10 @@
+keys,fr,en,it
+NAME,"Décompte Noël","Christmas countdown", "Conto alla rovescia per Natale"
+INTRO_MESSAGE,"Touchez l'écran pour\nentrer dans la magie de\nNoël","Touch the screen to\nstep into the magic of\nChristmas","Tocca lo schermo per\nentrare nella magia del\nNatale"
+INTRO_CHRISTMAS,"NOEL","CHRISTMAS","NATALE"
+HEADER,"C'est Noël dans","It's Christmas in","È Natale tra"
+DAYS,"jours","days","giorni"
+HOURS,"heures","hours","ore"
+MINUTES,"minutes","minutes","minuti"
+SECONDS,"secondes","seconds","secondi"
+MERRY_CHRISTMAS,"Joyeux Noël!","Merry Christmas!","Buon Natale!"

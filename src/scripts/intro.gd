@@ -7,7 +7,7 @@ extends Node
 const FIREWORK_SCENE: PackedScene = preload("res://scenes/Firework.tscn")
 const SNOW_SCENE: PackedScene = preload("res://scenes/Snowflakes.tscn")
 
-func _ready() -> void:		
+func _ready() -> void:
 	var firework_warmup: CPUParticles2D = FIREWORK_SCENE.instantiate()
 	firework_warmup.modulate = Color(0,0,0,0.01)
 	canvas.add_child(firework_warmup)
@@ -27,11 +27,11 @@ func _ready() -> void:
 	
 func _refresh() -> void:
 	var result = Global.christmas_countdown()
-	
+
 	if result.seconds > 0:
 		seconds.text = str(result.seconds)
 	else:
-		seconds.text = "JOYEUX NOEL"
+		seconds.text = tr("INTRO_CHRISTMAS")
 		timer.stop()
 	
 func _input(event: InputEvent) -> void:

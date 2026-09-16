@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1789577399|664433589';
+const CACHE_VERSION = '1789586796|492787214';
 /** @type {string} */
 const CACHE_PREFIX = 'Décompte Noël-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;

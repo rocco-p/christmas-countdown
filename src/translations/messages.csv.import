@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cn5fo0lrergen"
+
+[deps]
+
+files=["res://translations/messages.fr.translation", "res://translations/messages.en.translation", "res://translations/messages.it.translation"]
+
+source_file="res://translations/messages.csv"
+dest_files=["res://translations/messages.fr.translation", "res://translations/messages.en.translation", "res://translations/messages.it.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

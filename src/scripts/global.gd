@@ -23,16 +23,7 @@ func _init() -> void:
 	magic_sound.stream = preload("res://assets/magic.wav")
 	add_child(magic_sound)
 		
-func christmas_countdown() -> Dictionary:
-	# Texte à afficher
-	var text_string: String = "[font_size=120][color=red]C'est Noël dans[/color][/font_size]\n"
-	text_string += "[font_size=80]"
-	text_string += "[color=green]%02d[/color] [color=red]jours[/color]\n"
-	text_string += "[color=green]%02d[/color] [color=red]heures[/color]\n"
-	text_string += "[color=green]%02d[/color] [color=red]minutes[/color]\n"
-	text_string += "[color=green]%02d[/color] [color=red]secondes[/color]\n"
-	text_string += "[/font_size]"
-	
+func christmas_countdown() -> Dictionary:	
 	var now: Dictionary = Time.get_datetime_dict_from_system(false)	
 	var year: int = now["year"]
 		
@@ -52,10 +43,10 @@ func christmas_countdown() -> Dictionary:
 	var christmas: int = Time.get_unix_time_from_datetime_dict(christmas_date)
 	
 	var total_seconds: int = christmas - today
-	
+
 	if (total_seconds <= 0):
-		return {"code": -1, "text": "[font_size=120][color=red]Joyeux Noël ![/color][/font_size]"}
-	
+		return {"code": -1,"seconds": total_seconds, "text": "[font_size=120][color=red]" + tr("MERRY_CHRISTMAS") +  "[/color][/font_size]"}
+		
 	var days: int = int(total_seconds / 86400.0)
 	var remaining: int = int(total_seconds) % 86400
 	
@@ -65,7 +56,23 @@ func christmas_countdown() -> Dictionary:
 	var minutes: int = int(remaining / 60.0)
 	var seconds = remaining % 60
 	
-	return {"code": 0,"seconds": total_seconds, "text": text_string % [days, hours, minutes, seconds]}
+	var data: Array = []
+	if days > 0:
+		data = [days, hours, minutes, seconds]
+	else:
+		data = [hours, minutes, seconds]
+			
+	# Text to disnplay
+	var text_string: String = "[font_size=120][color=red]" + tr("HEADER") + "[/color][/font_size]\n"
+	text_string += "[font_size=80]"
+	if days > 0:
+		text_string += "[color=green]%02d[/color] [color=red]" + tr("DAYS") + "[/color]\n"
+	text_string += "[color=green]%02d[/color] [color=red]" + tr("HOURS") + "[/color]\n"
+	text_string += "[color=green]%02d[/color] [color=red]" + tr("MINUTES") + "[/color]\n"
+	text_string += "[color=green]%02d[/color] [color=red]" + tr("SECONDS") +  "[/color]\n"
+	text_string += "[/font_size]"
+	
+	return {"code": 0,"seconds": total_seconds, "text": text_string % data}
 
 func _on_window_focus_entered() -> void:
 	#if OS.has_feature("web"):
