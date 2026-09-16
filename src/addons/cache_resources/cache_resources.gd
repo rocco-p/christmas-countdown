@@ -22,7 +22,7 @@ func _export_end() -> void:
 	file.close()
 	
 	var cached_files: String = "const CACHED_FILES = ["
-	var new_cached_files: String = "const CACHED_FILES =[\"scripts/bgaudio.js\",\"assets/background_music.mp3\","
+	var new_cached_files: String = "const CACHED_FILES = [\"scripts/bgaudio.js\",\"assets/background_music.mp3\","
 
 	if content.contains(cached_files) and not content.contains('bgaudio.js'):
 		content = content.replace(cached_files, new_cached_files)
