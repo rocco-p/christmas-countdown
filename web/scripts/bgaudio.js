@@ -10,7 +10,6 @@ function initAudio(src) {
 		document.body.appendChild(sound);
 		
 		document.addEventListener('visibilitychange', manageAudio);
-		
 	} catch(error) {
 		console.error('initAudio : ', error);
 	}
@@ -18,7 +17,7 @@ function initAudio(src) {
 
 function playAudio() {
 	try {
-		document.getElementById('audio-player').play();
+		document.getElementById('audio-player').play().catch(error => console.error(error));
 		isPlaying = true;
 	} catch(error) {
 		console.error('playAudio : ', error);
@@ -37,7 +36,7 @@ function pauseAudio() {
 
 function resumeAudio() {
 	try {
-		document.getElementById('audio-player').play();
+		document.getElementById('audio-player').play().catch(error => console.error(error));
 	} catch(error) {
 		console.error('resumeAudio : ', error);
 		isPlaying = false;
@@ -61,7 +60,7 @@ function manageAudio() {
 			if (document.hidden) {
 				pauseAudio();
 			} else {
-				resumeAudio()
+				resumeAudio();
 			}
 		}
 	} catch(error) {

@@ -32,7 +32,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/minimize_html_build/plugin.cfg")
+enabled=PackedStringArray("res://addons/cache_resources/plugin.cfg", "res://addons/minimize_html_build/plugin.cfg")
 
 [input_devices]
 
