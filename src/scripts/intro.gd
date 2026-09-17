@@ -7,7 +7,7 @@ extends Node
 const FIREWORK_SCENE: PackedScene = preload("res://scenes/Firework.tscn")
 const SNOW_SCENE: PackedScene = preload("res://scenes/Snowflakes.tscn")
 
-func _ready() -> void:
+func _ready() -> void:	
 	var firework_warmup: CPUParticles2D = FIREWORK_SCENE.instantiate()
 	firework_warmup.modulate = Color(0,0,0,0.01)
 	canvas.add_child(firework_warmup)
@@ -37,7 +37,8 @@ func _refresh() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_pressed():
 		if event is InputEventScreenTouch \
-		or event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT :
+		or event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT \
+		or (event is InputEventKey and (event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER)):
 			timer.stop()
 			
 			Global.magic_sound.play()

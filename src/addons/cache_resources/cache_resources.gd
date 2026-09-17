@@ -21,12 +21,20 @@ func _export_end() -> void:
 	var content = file.get_as_text()
 	file.close()
 	
-	var cached_files: String = "const CACHED_FILES = ["
-	var new_cached_files: String = "const CACHED_FILES = [\"scripts/bgaudio.js\",\"assets/background_music.mp3\","
+	if content.contains("// patched"):
+		return
+	
+	const cached_files: String = "const CACHED_FILES = ["
+	const new_cached_files: String = cached_files + "\"scripts/bgaudio.js\",\"assets/background_music.mp3\","
 
-	if content.contains(cached_files) and not content.contains('bgaudio.js'):
-		content = content.replace(cached_files, new_cached_files)
-		
-		file = FileAccess.open(service_worker_file, FileAccess.WRITE)
-		file.store_string(content)
-		file.close()
+	content = content.replace(cached_files, new_cached_files)
+	
+	var install = "self.addEventListener('install', (event) => {"
+	var new_install = install + "\n\tself.skipWaiting();"
+	
+	content = content.replace(install, new_install)
+	content = "// patched\n" + content
+	
+	file = FileAccess.open(service_worker_file, FileAccess.WRITE)
+	file.store_string(content)
+	file.close()

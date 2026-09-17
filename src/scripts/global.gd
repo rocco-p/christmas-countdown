@@ -1,6 +1,6 @@
 extends Node
 
-var magic_sound: AudioStreamPlayer = AudioStreamPlayer.new()
+var magic_sound: AudioStreamPlayer
 
 const COLORS: Array[GradientTexture2D] = [
 	preload("res://textures/firework_blue.tres"),
@@ -12,6 +12,7 @@ const COLORS: Array[GradientTexture2D] = [
 	]
 
 func _ready() -> void:
+	get_tree().root.title = tr("NAME")
 	get_window().focus_entered.connect(_on_window_focus_entered)
 	get_window().focus_exited.connect(_on_window_focus_exited)
 	
@@ -85,3 +86,7 @@ func _on_window_focus_exited() -> void:
 		#AudioServer.set_bus_mute(0, true)
 		#JavaScriptBridge.eval("pauseAudio();")
 	pass
+
+func _exit_tree() -> void:
+	if (magic_sound):
+		magic_sound.free()

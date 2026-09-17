@@ -1,6 +1,7 @@
 extends Node2D
 
 var rng = RandomNumberGenerator.new()
+var _stream_player: AudioStreamPlayer
 
 @onready var canvas: CanvasLayer = $Canvas
 @onready var text: RichTextLabel = $Canvas/Text
@@ -23,11 +24,11 @@ func _ready() -> void:
 	else:
 		var resource_path: String = "res://assets/background_music.ogg"
 		if ResourceLoader.exists(resource_path):
-			var stream_player: AudioStreamPlayer = AudioStreamPlayer.new()
-			stream_player.stream = load(resource_path)
-			stream_player.stream.loop = true
-			stream_player.autoplay = true
-			add_child(stream_player)
+			_stream_player = AudioStreamPlayer.new()
+			_stream_player.stream = load(resource_path)
+			_stream_player.stream.loop = true
+			_stream_player.autoplay = true
+			add_child(_stream_player)
 	
 func _input(event: InputEvent) -> void:
 	if event.is_pressed():
@@ -84,3 +85,6 @@ func _screenshot() -> void:
 
 	image.save_png("user://capture.png")
 	
+func _exit_tree() -> void:
+	if _stream_player:
+		_stream_player.free()
