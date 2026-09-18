@@ -35,7 +35,7 @@ func _refresh() -> void:
 		timer.stop()
 	
 func _input(event: InputEvent) -> void:
-	if event.is_pressed():
+	if event.is_released():
 		if event is InputEventScreenTouch \
 		or event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT \
 		or (event is InputEventKey and (event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER)):

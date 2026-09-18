@@ -17,7 +17,7 @@ func _ready() -> void:
 	get_window().focus_exited.connect(_on_window_focus_exited)
 	
 	if OS.has_feature("web"):
-		JavaScriptBridge.eval("initAudio('assets/background_music.mp3');")
+		JavaScriptBridge.eval("initAudio('assets/background_music.ogg');")
 
 func _init() -> void:		
 	magic_sound = AudioStreamPlayer.new()
