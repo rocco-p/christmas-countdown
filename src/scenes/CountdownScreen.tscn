@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cbvfbknkgtdie" path="res://scripts/countdown_screen.gd" id="1_hnsy1"]
 [ext_resource type="FontFile" uid="uid://dt6f84ufh80c5" path="res://assets/MountainsofChristmas-Bold.ttf" id="2_2knl8"]
-[ext_resource type="Texture2D" uid="uid://b14la01qlwjvb" path="res://assets/santa_claus.png" id="3_wmy3a"]
-[ext_resource type="Texture2D" uid="uid://cnortsmeqluvg" path="res://assets/christmas_tree.png" id="4_74uaw"]
-[ext_resource type="Texture2D" uid="uid://ocn452fgho8" path="res://assets/holly.png" id="5_qb3nk"]
-[ext_resource type="Texture2D" uid="uid://5oevnrnxjqrn" path="res://assets/holly2.png" id="6_n6x0m"]
+[ext_resource type="Texture2D" uid="uid://h87q7a6gf31a" path="res://assets/santa_claus.svg" id="3_62mfv"]
+[ext_resource type="Texture2D" uid="uid://dhm7txb8c628a" path="res://assets/christmas_tree.svg" id="4_62mfv"]
+[ext_resource type="Texture2D" uid="uid://cxwgsjbpd8754" path="res://assets/holly.svg" id="5_hnsy1"]
+[ext_resource type="Texture2D" uid="uid://dlctp1kiqnye7" path="res://assets/holly2.svg" id="6_hnsy1"]
 [ext_resource type="Texture2D" uid="uid://dp7kucvbq2vyt" path="res://textures/snowflake.tres" id="7_a5xfm"]
 [ext_resource type="AudioStream" uid="uid://cqef83bn80mxg" path="res://assets/firework.wav" id="8_53gve"]
 
@@ -54,7 +54,7 @@ offset_top = -327.0
 offset_right = 327.0
 grow_vertical = 0
 offset_transform_enabled = true
-texture = ExtResource("3_wmy3a")
+texture = ExtResource("3_62mfv")
 expand_mode = 1
 
 [node name="ChristmasTree" type="TextureRect" parent="Canvas" unique_id=675805115]
@@ -69,7 +69,7 @@ grow_horizontal = 0
 grow_vertical = 0
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 20)
-texture = ExtResource("4_74uaw")
+texture = ExtResource("4_62mfv")
 expand_mode = 1
 
 [node name="Holly" type="TextureRect" parent="Canvas" unique_id=2128871226]
@@ -77,7 +77,7 @@ offset_right = 185.0
 offset_bottom = 185.0
 offset_transform_enabled = true
 offset_transform_rotation = -1.5707964
-texture = ExtResource("5_qb3nk")
+texture = ExtResource("5_hnsy1")
 expand_mode = 1
 
 [node name="HollyCenter" type="TextureRect" parent="Canvas" unique_id=1491147257]
@@ -88,7 +88,7 @@ offset_left = -142.36432
 offset_right = 142.36432
 offset_bottom = 101.0
 grow_horizontal = 2
-texture = ExtResource("6_n6x0m")
+texture = ExtResource("6_hnsy1")
 expand_mode = 1
 
 [node name="Holly2" type="TextureRect" parent="Canvas" unique_id=541134219]
@@ -99,7 +99,7 @@ offset_left = -185.0
 offset_bottom = 185.0
 grow_horizontal = 0
 offset_transform_enabled = true
-texture = ExtResource("5_qb3nk")
+texture = ExtResource("5_hnsy1")
 expand_mode = 1
 
 [node name="Snow" type="CPUParticles2D" parent="Canvas" unique_id=301667406]

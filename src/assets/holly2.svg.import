@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5oevnrnxjqrn"
-path="res://.godot/imported/holly2.png-9265037a782eac9d3051aaf70caffaf5.ctex"
+uid="uid://dlctp1kiqnye7"
+path="res://.godot/imported/holly2.svg-eb400a0eb035e7e156cee3726a8410d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/holly2.png"
-dest_files=["res://.godot/imported/holly2.png-9265037a782eac9d3051aaf70caffaf5.ctex"]
+source_file="res://assets/holly2.svg"
+dest_files=["res://.godot/imported/holly2.svg-eb400a0eb035e7e156cee3726a8410d0.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

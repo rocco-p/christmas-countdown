@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b14la01qlwjvb"
-path="res://.godot/imported/santa_claus.png-30ec30ed2174a05a0ea6793564c99e98.ctex"
+uid="uid://dhm7txb8c628a"
+path="res://.godot/imported/christmas_tree.svg-c4c7de760cb21886b389c7f27c9ee092.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/santa_claus.png"
-dest_files=["res://.godot/imported/santa_claus.png-30ec30ed2174a05a0ea6793564c99e98.ctex"]
+source_file="res://assets/christmas_tree.svg"
+dest_files=["res://.godot/imported/christmas_tree.svg-c4c7de760cb21886b389c7f27c9ee092.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
