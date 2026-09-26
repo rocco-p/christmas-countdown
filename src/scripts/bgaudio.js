@@ -5,7 +5,7 @@ function initAudio(src) {
 		var sound      = document.createElement('audio');
 		sound.id       = 'audio-player';
 		sound.src      = src;
-		sound.type     = 'audio/mpeg';
+		sound.type     = 'audio/ogg';
 		sound.loop     = true;
 		document.body.appendChild(sound);
 		
